@@ -1,0 +1,8 @@
+<div>
+  <input type="checkbox" name="hide-completed" id="hide-completed" [(ngModel)]="hideCompleted">
+  <label for="hide-completed">Hide Completed</label>
+</div>
+
+<ul>
+  <app-todo *ngFor="let todo of todos" [todo]="todo"></app-todo>
+</ul>

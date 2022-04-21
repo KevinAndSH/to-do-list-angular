@@ -1,0 +1,5 @@
+<li>
+  <input type="checkbox" name="checked" [id]="todo.id" [checked]="todo.isCompleted" (click)="toggleCompleted()">
+  <label [for]="todo.id">{{ todo.content }}</label>
+  <button (click)="deleteTodo()">DELETE</button>
+</li>
