@@ -1,8 +1,9 @@
-<div>
+<div class="menu">
   <input type="checkbox" name="hide-completed" id="hide-completed" [(ngModel)]="hideCompleted">
-  <label for="hide-completed">Hide Completed</label>
+  <label for="hide-completed" data-text="Hide Completed"></label>
 </div>
 
-<ul>
+<div class="todo-list">
   <app-todo *ngFor="let todo of todos" [todo]="todo"></app-todo>
-</ul>
+  <p *ngIf="!todos.length">No to-dos remaining</p>
+</div>

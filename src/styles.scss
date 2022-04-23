@@ -1,7 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+
+  background-image: url("./assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  display: grid;
+  place-content: center;
+}
+
 li {
   list-style: none;
+}
 
-  p {
-    display: inline-block;
+button,
+input[type="submit"] {
+  &:hover {
+    cursor: pointer;
   }
 }

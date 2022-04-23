@@ -1,0 +1,56 @@
+:host {
+  display: block;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  margin-block: .5em;
+  border: 1px solid rgba(0, 0, 0, .3);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+
+  &:checked + p::before {
+    content: "✔️";
+  }
+
+  &:hover + p::before,
+  &:focus-visible + p::before {
+    box-shadow: 0 0 .1em black, inset 0 0 .1em black;
+  }
+}
+
+.text {
+  display: inline-flex;
+  align-items: center;
+  margin-inline: .5em;
+  gap: .6em;
+
+  &::before {
+    $side: 1.2em;
+    content: "";
+    display: inline-block;
+
+    width: $side;
+    height: $side;
+    border: 1px solid black;
+    border-radius: .25em;
+  }
+}
+
+.delete {
+  margin-left: auto;
+  padding: .5em;
+  letter-spacing: .1em;
+
+  &::after {
+    content: "DELETE";
+  }
+}

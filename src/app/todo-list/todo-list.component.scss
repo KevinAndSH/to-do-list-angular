@@ -1,0 +1,39 @@
+:host {
+  display: block;
+}
+
+.menu {
+  input {
+    display: none;
+
+    &:checked + label {
+      box-shadow: 0 0 .5em black, inset 0 0 .25em black;
+    }
+  }
+
+  label {
+    border: 1px solid black;
+    border-radius: 9999px;
+    padding: .5em 1em;
+    cursor: pointer;
+
+    &::after {
+      content: attr(data-text);
+    }
+  }
+}
+
+.todo-list {
+  height: 100%;
+  margin-block: 1.25em;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+
+    &-thumb {
+      border-radius: 1em;
+      background-color: rgba(0, 0, 0, .1);
+    }
+  }
+}

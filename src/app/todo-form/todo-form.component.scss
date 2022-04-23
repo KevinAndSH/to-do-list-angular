@@ -1,0 +1,21 @@
+:host {
+  display: block;
+}
+
+form {
+  $fz: 1rem;
+
+  display: flex;
+  margin-block: 1em;
+
+  .input {
+    width: 100%;
+    padding: .5em;
+    font-size: $fz;
+  }
+
+  .submit {
+    padding: .5em;
+    font-size: $fz;
+  }
+}
